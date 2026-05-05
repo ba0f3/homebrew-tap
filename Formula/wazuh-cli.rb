@@ -5,21 +5,21 @@
 class WazuhCli < Formula
   desc "AI-agent-first CLI for the Wazuh Server API"
   homepage "https://github.com/ba0f3/wazuh-cli"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.8/wazuh-cli_Darwin_x86_64.tar.gz"
-      sha256 "36668ff4bd39c562a5675fe09dad86989a2e319d53c2546848c954f755ec0869"
+      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.9/wazuh-cli_Darwin_x86_64.tar.gz"
+      sha256 "f21eb5df1b17464b4c71a5a2445ef1779ae6196ad60dc4451de8c78d189f3a27"
 
       define_method(:install) do
         bin.install "wazuh-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.8/wazuh-cli_Darwin_arm64.tar.gz"
-      sha256 "90d9986579dcba1ff3c33c6f0d23b8ff5d512780ce90d32825ef19f44f9c02f3"
+      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.9/wazuh-cli_Darwin_arm64.tar.gz"
+      sha256 "dc53a7f15eba3704d1c7bfef38df603e584f93924ca860246778f42810929be9"
 
       define_method(:install) do
         bin.install "wazuh-cli"
@@ -29,15 +29,15 @@ class WazuhCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.8/wazuh-cli_Linux_x86_64.tar.gz"
-      sha256 "9f7820deec82c0138eec47382d151d2f7c41c07664a5ffa23adf0257a771f237"
+      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.9/wazuh-cli_Linux_x86_64.tar.gz"
+      sha256 "f4dd5aada7ae115fca95a352c65ff6811d303189be38396854b7aac893a2d3c6"
       define_method(:install) do
         bin.install "wazuh-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.8/wazuh-cli_Linux_arm64.tar.gz"
-      sha256 "5ca135edbb9c8250fe67149175f40e7103ec0f81689e8db6b5951e804d35373d"
+      url "https://github.com/ba0f3/wazuh-cli/releases/download/v0.1.9/wazuh-cli_Linux_arm64.tar.gz"
+      sha256 "3d0aa95dd1bd50604275d2632a32deee223c6827ed8c171e84d7887d951fdf47"
       define_method(:install) do
         bin.install "wazuh-cli"
       end
