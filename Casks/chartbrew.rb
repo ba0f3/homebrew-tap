@@ -35,9 +35,7 @@ cask "chartbrew" do
   binary "chartbrew"
 
   postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/chartbrew"]
-    end
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/chartbrew"] if OS.mac?
   end
 
   # No zap stanza required
